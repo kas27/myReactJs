@@ -1,0 +1,17 @@
+.articles__list{
+  list-style: none;
+}
+.articles__author{
+  font-style: italic;;
+  font-size: 12px;
+  font-weight: 300;
+}
+.articles__body{
+  font-size: 14px;
+  color: black;
+}
+.articles__list li{
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}

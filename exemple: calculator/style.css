@@ -1,0 +1,55 @@
+.calculator{
+  width: 250px;
+  padding: 20px;
+  border: 2px solid tomato;
+  border-radius: 30px;
+  margin: auto;
+}
+.calculator-amount p{
+  border-bottom: 2px solid black;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
+  height: 21px;
+}
+.item-input{
+  width: 100%;
+  display: block;
+  border-color: #cccccc;
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+.item-input + .item-input{
+  margin-top: 15px;
+}
+.calculator-buttons{
+  margin-top: 20px;
+}
+.calculator-buttons button{
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 25px;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  color: white;
+}
+button + button{
+  margin-top: 10px;
+}
+button:hover{
+  cursor: pointer;
+}
+.button-fold{
+  background: green;
+}
+.button-deduct{
+  background: red;
+}
+.button-multiply{
+  background: blue;
+}

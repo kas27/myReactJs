@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
+</head>
+<body>
+    <div id="content"></div>
+    <script type="text/babel">
+      var DynamicHellWorld = React.createClass({
+        getInitialState: function(){
+          return {
+            displayedValue: name
+          }
+        },
+        handleNameChange(event) {
+          var eventInput = event.target.value;
+
+          if(eventInput === '') {
+            this.setState({
+              name: 'stranger!'
+            });
+          } else {
+            this.setState({
+              name: eventInput
+            });
+          }
+
+        },
+        render: function() {
+          return (
+            <div className="dynamic__hell-world">
+              <input type="text"  onChange={this.handleNameChange}/>
+              <p className="dynamic__block">Hell, {this.state.name}</p>
+            </div>
+          )
+        }
+      });
+      ReactDOM.render(
+          <DynamicHellWorld />,
+          document.getElementById('content')
+      )
+    </script>
+</body>
+</html>
